@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class LoginManager {
 
-    private ArrayList<Account> listAccounts = new AccountData().setUpData();
+    private final ArrayList<Account> listAccounts = new AccountData().setUpData();
 
     public boolean checkAccountExist(String accountNumber) {
         for (Account account : listAccounts) {

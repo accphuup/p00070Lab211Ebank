@@ -18,13 +18,18 @@ public class Main {
 
         ResourceBundle bundle = validate.getBundle();
 
+         // Loop the login process.
         while (true) {
+            
+             // Account number entered by the user
             String accountNumber = validate.checkInputAccountNumber();
             if (!manager.checkAccountExist(accountNumber)) {
                 System.out.println(bundle.getString("login_error1"));
                 System.out.println("------------------------------");
                 System.out.println(bundle.getString("login_again"));
             } else {
+                
+                 // Password entered by the user.
                 String password = validate.checkInputPassword();
                 if (!manager.checkLogin(accountNumber, password)) {
                     System.out.println(bundle.getString("login_error2"));
